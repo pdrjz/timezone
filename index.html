@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timezone Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        select, input {
+            margin: 10px;
+            padding: 10px;
+        }
+        .timezone-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Timezone Converter</h1>
+    <div>
+        <label for="time">Select Time:</label>
+        <input type="datetime-local" id="time">
+    </div>
+    <div>
+        <label for="timezone">Select Base Timezone:</label>
+        <select id="timezone">
+            <!-- Timezone options will be populated here -->
+        </select>
+    </div>
+    <div>
+        <label for="display-timezone">Select Timezone to Display:</label>
+        <select id="display-timezone">
+            <!-- Timezone options will be populated here -->
+        </select>
+        <button onclick="addTimezone()">Add Timezone</button>
+    </div>
+    <div class="timezone-list">
+        <h2>Selected Timezones:</h2>
+        <ul id="timezone-list">
+            <!-- Selected timezones will be displayed here -->
+        </ul>
+    </div>
+    <button onclick="convertTime()">Convert Time</button>
+    <h2>Converted Times:</h2>
+    <div id="converted-times">
+        <!-- Converted times will be displayed here -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
